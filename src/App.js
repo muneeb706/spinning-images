@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.css";
 import ImagesSpinner from "./components/ImagesSpinner";
 
@@ -34,7 +35,14 @@ function App() {
       key: "sixth",
     },
   ];
-  return <ImagesSpinner images={images} />;
+  return (
+    <>
+      <h2 style={{ textAlign: "center", margin: 50 }}>
+        Click on the image to enlarge it.
+      </h2>
+      <ImagesSpinner images={images} />;
+    </>
+  );
 }
 
 export default App;
