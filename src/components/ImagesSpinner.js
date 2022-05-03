@@ -1,8 +1,16 @@
 import React from "react";
-import ImageContainer from "./ImageContainer";
+import ImageCard from "./ImageCard";
 import ImageModal from "./ImageModal";
+import PropTypes from "prop-types";
 
-export default function ImagesSpinner({ images }) {
+export default function ImagesSpinner({
+  images,
+  direction = "left",
+  spinSpeed = 3,
+}) {
+  const spinDeg = `${90 * spinSpeed}deg`;
+  const spinDegDir = direction === "right" ? spinDeg : `-${spinDeg}`;
+
   const onImageClick = (event) => {
     var modal = document.getElementById("img-modal");
 
@@ -17,11 +25,18 @@ export default function ImagesSpinner({ images }) {
     };
   };
 
+  const setCssVariable = (name, val) => {
+    let root = document.documentElement;
+    root.style.setProperty(`--${name}`, val);
+  };
+
+  setCssVariable("rotate-to", spinDegDir);
+
   return (
     <div id="container">
       <div id="rectangle" className="wheel">
         {images.map((image) => (
-          <ImageContainer {...image} onClick={onImageClick} />
+          <ImageCard {...image} onClick={onImageClick} />
         ))}
       </div>
       <ImageModal />
@@ -39,4 +54,6 @@ ImagesSpinner.propTypes = {
       );
     }
   },
+  direction: PropTypes.oneOf(["left", "right"]),
+  spinSpeed: PropTypes.oneOf([1, 2, 3]),
 };
