@@ -1,6 +1,8 @@
 # Spinning Images
 It contains reusable component for displaying spinning images.
 
+![Spinning Images GIF](./images/spinning-images.gif)
+
 ## How to run
 
 <em>This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).</em>
