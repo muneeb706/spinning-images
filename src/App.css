@@ -1,24 +1,29 @@
+/* Variables */
 :root {
   --rotate-from: 0deg;
   --rotate-to: -360deg;
   --play-state: running;
 }
 
+/* Elements */
+
 body {
   background-color: black;
   color: white;
 }
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+/* IDs */
 
 #container {
   width: 100%;
   height: 700px;
   perspective: 800;
   perspective-origin: 50% 225px;
-}
-
-img {
-  width: 100%;
-  height: 100%;
 }
 
 #rectangle {
@@ -31,6 +36,12 @@ img {
   transform-style: preserve-3d;
   animation: spin 8s infinite linear;
   animation-play-state: var(--play-state);
+}
+
+/* Classes */
+
+.clickable-img {
+  cursor: pointer;
 }
 
 .wheel > div:nth-child(1) {
@@ -59,15 +70,6 @@ img {
   border: 1px solid white;
 }
 
-@keyframes spin {
-  from {
-    transform: rotateY(var(--rotate-from));
-  }
-  to {
-    transform: rotateY(var(--rotate-to));
-  }
-}
-
 .modal {
   display: none;
   position: fixed;
@@ -85,23 +87,14 @@ img {
   margin: auto;
   display: block;
   width: 50%;
+  height: 50%;
   border-radius: 5px;
-  cursor: pointer;
   transition: 0.3s;
 }
 
 .modal-content {
   animation-name: zoom;
   animation-duration: 0.6s;
-}
-
-@keyframes zoom {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
 }
 
 .close {
@@ -119,4 +112,23 @@ img {
   color: red;
   text-decoration: none;
   cursor: pointer;
+}
+
+/* Keyframes */
+@keyframes spin {
+  from {
+    transform: rotateY(var(--rotate-from));
+  }
+  to {
+    transform: rotateY(var(--rotate-to));
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
