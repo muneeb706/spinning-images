@@ -1,7 +1,7 @@
 # Spinning Images
 It contains reusable component for displaying spinning images.
 
-![Spinning Images GIF](./images/spinning-images.gif)
+![Spinning Images GIF](./doc/images/spinning-images.gif)
 
 ## How to run
 
