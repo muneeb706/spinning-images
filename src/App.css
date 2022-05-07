@@ -32,7 +32,6 @@ img {
   margin: 0 auto;
   height: 300px;
   width: 400px;
-  transition: transform 2s;
   transform-style: preserve-3d;
   animation: spin 8s infinite linear;
   animation-play-state: var(--play-state);
