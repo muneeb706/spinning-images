@@ -27,4 +27,4 @@ Now, to Run story book:
 
 
 <br/>
-For details: https://github.com/muneeb706/spinning-images#readme
+For details: https://github.com/muneeb706/spinning-images#readme](https://muneebshahid.com/spinning-images-in-react-with-storybook/
