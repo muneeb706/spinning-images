@@ -24,7 +24,3 @@ Now, to Run story book:
 1.  In the same root directory of this repo enter following command:
  
       `npm run storybook`
-
-
-<br/>
-For details: https://muneebshahid.com/spinning-images-in-react-with-storybook/
